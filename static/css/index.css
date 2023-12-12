@@ -1,0 +1,121 @@
+.content{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background-color: var(--backgrpound-color);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+.content h2{
+    margin-top: 2rem;
+    font-size: 20px;
+    font-weight: 700;
+    font-style: italic;
+    color: var(--text-color);
+    text-align: center;
+}
+
+.content p{
+    text-align: center;
+    line-height: 1.8;
+    color: var(--text-color);
+}
+.image{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    border-radius: 1rem;
+    border: 2px solid #fff;
+    overflow: hidden;
+}
+
+.image img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 0.8rem;
+    opacity: 50%;
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: fit-content;
+
+    
+}
+.image p{
+    position: absolute;
+    top: 20px;
+    text-align: center;
+}
+.socio-icons{
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.socio-icons a{
+    background: #fff;
+    border: 1px solid var(--btn-color);
+    border-radius: 0.8rem;
+    align-items: center;
+    padding: 5px 5px;
+    font-size: 20px;
+    margin: 0 10px;
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+.socio-icons a:hover{
+    color: var(--btn-color-dark);
+}
+.floating-item{
+    position: absolute;
+    bottom:  70px;
+    right: 70px;
+    width: 60px;
+    height: 60px;
+    z-index: 10;
+
+}
+.floating-item img{
+    background: transparent;
+    object-fit: cover;
+    mix-blend-mode: darken;
+    opacity: 80%;
+    transform: rotate(0deg);
+}
+.input-group{
+    display: flex;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0.5rem;
+  
+}
+.input-group a{
+    text-decoration: none;
+    margin: 10px 10px;
+    padding: 8px 16px;
+    border:  1px solid var(--btn-color);
+    color: var(--text-color);
+    border-radius: 0.7rem;
+    outline: none;
+    cursor: pointer;
+}
+.input-group a:hover{
+    background-color: var(--btn-color-dark);
+    color: #fff;
+}
