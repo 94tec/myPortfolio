@@ -11,6 +11,7 @@ const routes = {
     "/services": "/templates/services.html",
     "/portfolio": "/templates/portfolio.html",
     "/projects": "/templates/projects.html",
+    "/contact": "/templates/contact.html"
 };
 
 const handleLocation = async () => {
@@ -22,3 +23,19 @@ const handleLocation = async () => {
 window.onpopstate = handleLocation;
 window.route = route;
 handleLocation();
+
+const contactButton = document.getElementById('contact-btn');
+
+const loadContactForm =  () => {
+    console.log("clicked");
+    const contactForm = document.querySelector('.contact-form');
+    const content = document.getElementById('content');
+    const card = document.getElementById('card');
+
+    content.style.display = "none";
+    card.style.display = "none"
+    contactForm.classList.add("open-form");
+
+
+    
+};
