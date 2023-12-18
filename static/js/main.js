@@ -39,3 +39,23 @@ const loadContactForm =  () => {
 
     
 };
+
+const marker = document.querySelector('#marker');
+const list = document.querySelectorAll('ul li');
+
+function moveIndicator(e) {
+    marker.style.left = `${e.offsetLeft + e.offsetWidth / 2}px`;
+}
+list.forEach(link => {
+    link.addEventListener('mousemove', (e) => {
+        moveIndicator(e.target);
+    });
+    link.addEventListener('mouseover', activeLink)
+})
+
+function activeLink() {
+    list.forEach(item => {
+        item.classList.remove('active')
+        this.classList.add('active')
+    })
+}
