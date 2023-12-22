@@ -1,0 +1,185 @@
+section{
+    position: relative;
+    /* background: url(/static/images/setup1.jpg);
+    background-position-x: center;
+    background-repeat: no-repeat;
+    background-size: cover; */
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+section .box-wrapper{
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    transform: translate(-50%);
+    margin: 0 auto;
+    min-width: 90%;
+    min-height: 550px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: -1;
+
+   
+}
+section .box-wrapper .contact-info{
+    position: absolute;
+    top: 40px;
+    left: 0px;
+    width: 350px;
+    height: calc(100% - 80px);
+    background: #194261;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 0.75rem;
+    z-index: 1;
+
+}
+section .box-wrapper .contact-info h2{
+    color: var(--btn-color);
+    font-size: 25px;
+    font-weight: 500;
+
+}
+section .box-wrapper .contact-info .info{
+    position: relative;
+    margin: 20px 0;
+}
+section .box-wrapper .contact-info li{
+    position: relative;
+    list-style: none;
+    display: flex;
+    margin: 20px 0;
+    cursor: pointer;
+    align-items: flex-start;
+}
+section .box-wrapper .contact-info li:nth-child(3){
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+
+}
+section .box-wrapper .contact-info .sci{
+    position: relative;
+    display: flex;
+}
+section .box-wrapper .contact-info .sci li{
+    list-style: none;
+    margin-right: 15px;
+}
+section .cbox-wrapper .contact-info .sci li a{
+    text-decoration: none;
+}
+section .box-wrapper .contact-info .sci li a i{
+    filter: invert(1);
+    opacity: 0.5;
+}
+section .box-wrapper .contact-info .sci li:hover a i{
+    opacity: 1;
+}
+section .box-wrapper .contactForm{
+    position: absolute;
+    padding: 70px 50px;
+    background-color: rgba(235, 235, 220, 0.5);;
+    margin-left: 150px;
+    padding-left: 250px;
+    height: 100%;
+    width: calc(100% - 150px);
+    box-shadow: 0 50px 50px rgba(0, 0, 0, 0.5);
+    border-radius: 0.75rem;
+}
+section .box-wrapper .contactForm h2{
+    color: var(--btn-color);
+    font-size: 24px;
+    font-weight: 500;
+
+}
+section .box-wrapper .contactForm .formBox{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    flex-wrap: wrap;
+    padding-top: 30px;
+}
+.width-50{
+    position: relative;
+    display: flex;
+    gap: 30px;
+    width: 100%;
+
+}
+section .box-wrapper .contactForm .formBox .inputBox{
+    position: relative;
+    margin: 0 0 35px 0;
+}
+.width-50 .inputBox{
+    width: 47%;
+}
+section .box-wrapper .contactForm .formBox .inputBox .w100{
+    width: 100%;
+}
+section .box-wrapper .contactForm .formBox .inputBox input,
+section .box-wrapper .contactForm .formBox .inputBox textarea
+{
+    width: 100% !important;
+    padding: 5px 0;
+    resize: none;
+    font-size: 18px;
+    font-weight: 300;
+    border: none;
+    border-bottom:  1px solid #777;
+    outline: none;
+    background: transparent;
+}
+section .box-wrapper .contactForm .formBox .inputBox textarea{
+    background-color: rgba(219, 219, 213, 0.5);
+    padding-left: 10px;
+    min-height: 120px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 0.75rem;
+}
+section .box-wrapper .contactForm .formBox .inputBox span{
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    font-size: 18px;
+    font-weight: 300;
+    transition: 0.5s;
+    pointer-events: none;
+    transform: translateX(10px);
+}
+section .box-wrapper .contactForm .formBox .inputBox input:focus ~ span,
+section .box-wrapper .contactForm .formBox .inputBox textarea:focus ~ span,
+section .box-wrapper .contactForm .formBox .inputBox input:valid ~ span,
+section .box-wrapper .contactForm .formBox .inputBox textarea:valid ~ span
+{
+    transform: translateY(-20px);
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: #ff568c;
+}
+section .box-wrapper .contactForm .formBox .inputBox input[type = "submit"]
+{
+    position: relative;
+    cursor: pointer;
+    background: #0f3959;
+    color: #fff;
+    border: none;
+    max-width: 150px;
+    padding: 12px;
+}
+section .box-wrapper .contactForm .formBox .inputBox input[type = "submit"]:hover{
+    background-color: #ff568c;
+    color: #fff;
+}

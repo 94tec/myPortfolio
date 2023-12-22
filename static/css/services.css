@@ -45,18 +45,47 @@
     background-color: #fff;
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
     transform-style: preserve-3d;
+    overflow: hidden;
     z-index: 1;
 
+}
+.service-card::before{
+    content: "";
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background-image: conic-gradient(transparent,transparent,transparent,#00ccff);
+    animation: animate 4s linear infinite;
+}
+.service-card::after{
+    content: "";
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background-image: conic-gradient(transparent,transparent,transparent,#e94fc2);
+    animation: animate 4s linear infinite;
+    animation-delay: -2s;
+}
+.service-card span{
+    position: absolute;
+    inset: 5px;
+    border-radius: 16px;
+    background: #0c1022;
+    z-index: 1;
 }
 .service-card h4{
     font-style: italic;
     font-weight: 600;
     font-family: 'Motserrat';
+    color: #fff;
+    z-index: 999;
 }
 .service-card p{
-text-align: center;
-line-height: 1.5; 
-font-family: 'Motserrat';   
+    text-align: center;
+    line-height: 1.5; 
+    color: #fff;
+    z-index: 999;
+    font-family: 'Motserrat';   
 }
 .service-card button{
     padding: 8px 16px;
@@ -66,6 +95,8 @@ font-family: 'Motserrat';
     cursor: pointer;
     background: var(--btn-color);
     color: var(--text-color);
+    z-index: 999;
+
 }
 
 
