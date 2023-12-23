@@ -19,7 +19,7 @@
     position: absolute;
     top: 60px;
     left: 0;
-    width: 40%;
+    width: 39%;
     height: 550px;
     display: flex;
     border-radius: 0.785rem;
@@ -30,7 +30,7 @@
     position: relative;
     width: 100%;
     height: 100%;
-    border: 2px dashed #f3bbbb;
+    border: 2px solid #e6cfcf;
     border-radius: 0.75rem;
     display: flex;
     align-items: center;
@@ -129,13 +129,82 @@
     top: 0;
     right: 0;
     width: 60%;
-    height: 550px;
+    height: 610px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    flex-direction: column;
+}
+.details-page .right ul{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+    font-family: 'Motserrat';
+    font-size: 22px;
+}
+.details-page .right ul li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Motserrat';
+}
+.details-page .right ul h4{
+    color: rgba(136, 42, 136, 0.8);
+    font-weight: 700;
+    font-size: 20px;
+}
+.details-page .right ul li span{
+    color: rgba(92, 50, 92, 0.8);
+    font-size: 20px;
+}
+.details-page .right .experience{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(81, 92, 75, 0.5);
+    padding: 20px 0;
+    border-radius: 0.75rem;
+    color: #000;
+    font-size: 16px;
+    font-weight: 700;
+    font-style: italic;
+  
+
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 20px;
-    flex-direction: column;
 }
+aside{
+    width: 270px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    border: 2px solid #e6cfcf;
+    padding: 10px 0;
+    border-radius: 0.75rem;
+
+}
+aside h4{
+    color: rgba(136, 42, 136, 0.8);
+}
+aside button{
+    padding: 8px 12px;
+    background: var(--btn-color);
+    border-radius: 0.75rem;
+}
+
 
 
 
