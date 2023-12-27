@@ -40,22 +40,16 @@ const loadContactForm =  () => {
     
 };
 
-const marker = document.querySelector('#marker');
-const list = document.querySelectorAll('ul li');
 
-function moveIndicator(e) {
-    marker.style.left = `${e.offsetLeft + e.offsetWidth / 2}px`;
-}
-list.forEach(link => {
-    link.addEventListener('mousemove', (e) => {
-        moveIndicator(e.target);
-    });
-    link.addEventListener('mouseover', activeLink)
-})
-
-function activeLink() {
-    list.forEach(item => {
-        item.classList.remove('active')
-        this.classList.add('active')
-    })
-}
+ // Add active class to the current button (highlight it)
+ var header = document.getElementById("nav-links");
+ var btns = header.getElementsByClassName("btnLink");
+ for (var i = 0; i < btns.length; i++) {
+       btns[i].addEventListener("click", function() {
+  var current = document.getElementsByClassName("active");
+   if (current.length > 0) { 
+    current[0].className = current[0].className.replace(" active", "");
+   }
+   this.className += " active";
+   });
+ }

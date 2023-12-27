@@ -40,7 +40,7 @@
             </div>
             <div class="contactForm">
                 <h2>Send a Message</h2>
-                <div class="formBox">
+                <form class="formBox" onsubmit="sendEmail(); reset(); return false; ">
                    <div class="width-50">
                         <div class="inputBox">
                             <input type="text" name="" required>
@@ -53,7 +53,7 @@
                     </div>
                     <div class="width-50">
                         <div class="inputBox">
-                            <input type="text" name="" required>
+                            <input type="text" name="" id="email">
                             <span>Email Address</span>
                         </div>
                         <div class="inputBox">
@@ -69,9 +69,25 @@
                     <div class="inputBox w100">
                         <input type="submit" value="Send">
                     </div>
-                </div>
+                </form>
             </div>
         </div>
     </section>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function sendEmail(){
+            Email.send({
+                Host: "smptp.gmail.com",
+                Username: "fixtone94tec@gmail.com",
+                Password: "",
+                To: "m.damuchi.ke@gmail.com",
+                From: document.getElementById("email").value,
+                Subject: "New Content Form Enquiry",
+                Body: "And this is the body"
+            }).then(
+                message => alert(message)
+            );
+        }
+    </script>
 </body>
 </html>

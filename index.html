@@ -6,6 +6,7 @@
     <title>My Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/static/css/style.css">
+
 </head>
 <body>
     <div class="container">
@@ -45,11 +46,11 @@
                     <i></i>
                 </div>
             </div>
-            <div class="nav-links">
-                <a href="/" onclick="route()">Home</a>
-                <a href="/services" onclick="route()">Services</a>
-                <a href="/portfolio" onclick="route()">Portfolio</a>
-                <a href="/contact" onclick="route()">Contact Me</a>
+            <div class="nav-links" id="nav-links">
+                <a href="/" onclick="route()" class="btnLink active">Home</a>
+                <a href="/services" onclick="route()" class="btnLink">Services</a>
+                <a href="/portfolio" onclick="route()" class="btnLink">Portfolio</a>
+                <a href="/contact" onclick="route()" class="btnLink">Contact Me</a>
             </div>
         </nav>
         <div id="content-page">

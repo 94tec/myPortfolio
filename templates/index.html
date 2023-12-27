@@ -5,14 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/static/css/style.css">
     <title>Home</title>
+
 </head>
 <body>
     <div class="main">
         <div class="light"> 
             <div class="box">
                 <div class="content" id="content">
-                    <h2>I am <span>Fixtone Kaloki</h2>
-                    <span class="multiText"></span>
+                    <h2>I am Fixtone Kaloki</h2>
+                    <span id="multiText">Frontend Developer, UX $ UI Designer.</span>
                     <p>Having 3 years of Experience <br>With the ability to discern how to satisfy <br>a client’s needs using a web page</p>
                     <div class="input-group">
                         <a href="#">My Projects</a>
@@ -76,18 +77,21 @@
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script> 
-    <script>
-        var typingEffect = new Typed(".multiText", {
-            strings : [,"Frontend Developer", "UX $ UI Designer."],
-            loop: true,
-            typeSpeed: 100,
-            backSpeed: 80,
-            startDelay: 1000,
-            backDelay: 1500
-        });
-        typingEffect.start();
-    </script>
+  <!-- Load library from the CDN -->
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+  <!-- Setup and start animation! -->
+ 
+  <!-- <script>
+    var typingEffect = new Typed('#multiText', {
+    strings : ["Frontend Developer", "UX $ UI Designer."],
+    loop: true,
+    typeSpeed: 100,
+    backSpeed: 70,
+    startDelay: 1000,
+    backDelay: 1500
+    });
+    typingEffect.start();
+  </script> -->
 </body>
 </html>
 

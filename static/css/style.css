@@ -106,11 +106,12 @@ body{
     text-align: center;
     font-family: "Montserrat";
 }
-.multiText{
+#multiText{
     font-weight: 600;
     color: var(--btn-color);
     text-transform: capitalize;
     font-family: "Montserrat";
+    display: inline-block;
 }
 .content p{
     text-align: center;
@@ -263,9 +264,10 @@ body{
 }
 .nav-links{
     position: absolute;
-    right: 10px;
+    left: 50%;
+    transform: translate(-50%);
     display: flex;
-    gap: 0.8rem;
+    gap: 0.9rem;
 }
 .nav-links a{
     text-decoration: none;
@@ -274,14 +276,37 @@ body{
     font-style: italic;
     padding: 0.6rem 0.8rem;
     text-transform: uppercase;
-    border-radius: 0.6rem;
     outline: none;
     transition: all 0.5s ease;
     cursor: pointer;
-    background-color:var(--btn-color);
-    color: var(--text-color);
     font-family: "Montserrat";
+    color: var(--btn-color);
 }
+.nav-links a:nth-child(1):before{
+    width: 50px;
+}
+.nav-links a:nth-child(2):before{
+    width: 80px;
+}
+.nav-links a:nth-child(3):before{
+    width: 90px;
+}
+.nav-links a:nth-child(4):before{
+    width: 100px;
+}
+.nav-links a::before{
+    position: absolute;
+    bottom: 0;
+    content: "";
+    height: 2px;
+    width: 0;
+    background: var(--btn-color);
+    opacity: 0;
+    transition: all 0.4s;
+}
+.nav-links a.active:before{
+    opacity: 1;
+} 
 h2{ 
     font-size: 14px;
     font-style: italic;
