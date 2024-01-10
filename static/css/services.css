@@ -67,6 +67,13 @@
     animation: animate 4s linear infinite;
     animation-delay: -2s;
 }
+.service-card .img{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+}
 .service-card span{
     position: absolute;
     inset: 5px;
