@@ -43,6 +43,38 @@ section .box-wrapper .contact-info{
     z-index: 1;
 
 }
+section .box-wrapper .contact-info span i{
+    margin-right: 5px;
+    font-size: 20px;
+    color: var(--btn-color);
+}
+section .box-wrapper .contact-info span{
+    font-size: 16px;
+    font-weight: 800;
+    font-family: 'Motserrat';
+}
+section .box-wrapper .contact-info .list{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section .box-wrapper .contact-info .sci{
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+section .box-wrapper .contact-info .sci li a i{
+    font-size: 24px;
+
+}
+section .box-wrapper .contact-info .contact{
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    color: #fff;
+}
 section .box-wrapper .contact-info h2{
     color: var(--btn-color);
     font-size: 25px;
@@ -157,9 +189,10 @@ section .box-wrapper .contactForm .formBox .inputBox span{
     transition: 0.5s;
     pointer-events: none;
     transform: translateX(10px);
+    transform: translateY(-28px);
 }
 section .box-wrapper .contactForm .formBox .inputBox input:focus ~ span,
-section .box-wrapper .contactForm .formBox .inputBox textarea:focus ~ span,
+section .box-wrapper .contactForm .formBox .inputBox textarea:focus~span,
 section .box-wrapper .contactForm .formBox .inputBox input:valid ~ span,
 section .box-wrapper .contactForm .formBox .inputBox textarea:valid ~ span
 {

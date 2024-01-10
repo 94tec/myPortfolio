@@ -14,14 +14,15 @@
 }
 .content-page-header{
     position: relative;
-    top: 5px;
+    top: 24px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     width: 100%;
     height: 30px;
-    color: tomato;
+    color: #333;
+    font-size: 28px;
 
 }
 .content-page-header h4{
@@ -32,9 +33,9 @@
 
 .service-card{
     position: relative;
-    width: 300px;
-    height: 365px;
-    margin: 20px 0 20px 0;
+    width: 390px;
+    height: 450px;
+    padding: 10px;
     border: 1px solid #f3d2d2;
     border-radius: 0.75rem;
     display: flex;

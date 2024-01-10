@@ -28,7 +28,7 @@
                             <span><i class='bx bxl-telegram' ></i></span>
                             <span><i class='bx bxl-whatsapp' ></i></span>
                         </div>
-                        <span>+254 711 274 834 / +254 719 454 431</span>
+                        <span class="contact">+254 711 274 834/+254 719 454 431</span>
                         
                     </li>
                 </ul>
@@ -40,20 +40,20 @@
             </div>
             <div class="contactForm">
                 <h2>Send a Message</h2>
-                <form class="formBox" onsubmit="sendEmail(); reset(); return false; ">
+                <form class="formBox" action="https://formspree.io/f/xdoqknqn" method="POST">
                    <div class="width-50">
                         <div class="inputBox">
-                            <input type="text" name="" required>
+                            <input type="text" name="f_name" required>
                             <span>First Name</span>
                         </div>
                         <div class="inputBox">
-                            <input type="text" name="" required>
+                            <input type="text" name="l_name" required>
                             <span>Last Name</span>
                         </div>
                     </div>
                     <div class="width-50">
                         <div class="inputBox">
-                            <input type="text" name="" id="email">
+                            <input type="text" name="email" id="email">
                             <span>Email Address</span>
                         </div>
                         <div class="inputBox">
@@ -64,7 +64,7 @@
                    
                     <div class="inputBox w100">
                         <span>Write your message here....</span>
-                        <textarea name="" required></textarea>
+                        <textarea name="message" required></textarea>
                     </div>
                     <div class="inputBox w100">
                         <input type="submit" value="Send">
@@ -73,21 +73,5 @@
             </div>
         </div>
     </section>
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
-    <script>
-        function sendEmail(){
-            Email.send({
-                Host: "smptp.gmail.com",
-                Username: "fixtone94tec@gmail.com",
-                Password: "",
-                To: "m.damuchi.ke@gmail.com",
-                From: document.getElementById("email").value,
-                Subject: "New Content Form Enquiry",
-                Body: "And this is the body"
-            }).then(
-                message => alert(message)
-            );
-        }
-    </script>
 </body>
 </html>
