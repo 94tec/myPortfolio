@@ -126,7 +126,7 @@ body{
     justify-content: center;
     gap: 1rem;
 }
-.input-group a{
+.input-group input{
     text-decoration: none;
     padding: 8px 16px;
     background: var(--btn-color);
@@ -137,12 +137,14 @@ body{
     color: var(--text-color);
     box-shadow: 5px 5px 0px rgba(228, 220, 226, 0.46);
 }
-.input-group a:nth-child(2){
+.input-group input:nth-child(2){
     background-color: transparent;
     color: #000;
     border: 1px solid var(--btn-color);
 }
-
+.input-group input:nth-child(2):hover{
+    opacity: 50%;
+}
 
 .container{
     position: relative;
