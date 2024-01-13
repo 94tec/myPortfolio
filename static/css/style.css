@@ -142,8 +142,8 @@ body{
     color: #000;
     border: 1px solid var(--btn-color);
 }
-.input-group input:nth-child(2):hover{
-    opacity: 50%;
+.input-group input:hover{
+    opacity: 60%;
 }
 
 .container{
