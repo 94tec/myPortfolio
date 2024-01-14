@@ -24,23 +24,18 @@ window.onpopstate = handleLocation;
 window.route = route;
 handleLocation();
 
-const contactButton = document.getElementById('contact-btn');
-
-const loadContactForm =  () => {
-    console.log("clicked");
-    const contactForm = document.querySelector('.contact-form');
-    const content = document.getElementById('content');
-    const card = document.getElementById('card');
-
-    content.style.display = "none";
-    card.style.display = "none"
-    contactForm.classList.add("open-form");
 
 
-    
+function loadContactForm() {
+    const contactButton = document.getElementById('message-btn');
+    const contactForm = document.getElementById('service-area');
+    contactForm.style.visibility = "visible";   
 };
-
-
+function closeContactForm() {
+    const contactButton = document.getElementById('hide');
+    const contactForm = document.getElementById('service-area');
+    contactForm.style.visibility = "hidden";   
+};
  // Add active class to the current button (highlight it)
  var header = document.getElementById("nav-links");
  var btns = header.getElementsByClassName("btnLink");

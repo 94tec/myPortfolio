@@ -336,7 +336,167 @@ h2{
     flex-direction: row;
 
 }
+.service-area{
+    position: absolute;
+    top: 40px;
+    right: 450px;
+    aspect-ratio: 40/26;
+    background: black;
+    height: var(--height);
+    border-radius: 0.7rem;
+    box-shadow: 0 0 0.1em 0.25em hsl(var(--c-h), 20%, 25%), 0 0 0 var(--border-width) hsl(var(--c-h), 30%, 85%);
+    box-sizing: border-box;
+    opacity: 0;
+    transform: scale3d(2, 2, 2);
+    -webkit-animation: appear 1s var(--ease-out) forwards;
+    animation: appear 1s var(--ease-out) forwards;
+    --webkit-backface-visibility: hidden;
+    visibility: hidden;
+    transition: all 0.7s ease-in-out;
+}
 
+.service-area .dome{
+    position: relative;
+    inset: 0;
+    height: 100%;
+    background: inherit;
+    border-radius: 0.7rem;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+.service-area .dome .top-widget{
+    position: absolute;
+    top:0;
+    width: 100%;
+    height: 40px;
+    border-bottom: 1px solid var(--backgrpound-color);
+  }
+  .service-area .dome .top-widget .toolkit{
+      position: absolute;
+      top: 6px;
+      left: 0;
+     
+  }
+  .service-area .dome .top-widget .toolkit ion-icon{
+      font-size: 30px;
+      color: var(--text-color);
+  }
+  .service-area .dome .top-widget .hidden{
+      position: absolute;
+      top: 6px;
+      right: 5px;  
+  }
+  .service-area .dome .top-widget .hidden ion-icon{
+      font-size: 30px;
+      color: var(--text-color);
+      z-index: 5;
+  }
+  .service-area .dome .box-widget{ 
+    position: absolute;
+    top: 60px;
+    width: 100%;
+    height: calc(100% - 40px);
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 20px;
+    background-color: #fff;
+  }
+  .service-area .dome .box-widget .formBox{
+    position: relative;
+    display: flex;
+    width: 100%;
+    gap: 30px;
+    flex-wrap: wrap;
+    padding-top: 10px;
+    width: 100%;
+    background-color: #fff;
+    /* box-shadow: 0 50px 50px rgba(0, 0, 0, 0.5);  */
+}
+.service-area .dome .box-widget h2{
+    color: var(--btn-color);
+    font-size: 24px;
+    font-weight: 500;
+    font-family: 'montserrat';
+
+}
+.service-area .dome .box-widget .formBox .width-50{
+    position: relative;
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    padding: 0 10px 0 10px;
+}
+.service-area .dome .box-widget .formBox .inputBox{
+    position: relative;
+    margin: 0 0 25px 0;
+    width: 50%;
+}
+.service-area .dome .box-widget .formBox.width-50 .inputBox{
+    width: 50%;
+}
+.service-area .dome .box-widget .formBox .w100{
+    width: 100%;
+}
+.service-area .dome .box-widget .formBox .inputBox input,
+.service-area .dome .box-widget .formBox .inputBox textarea
+{
+    width: 100% !important;
+    padding: 5px 0;
+    resize: none;
+    font-size: 18px;
+    font-weight: 300;
+    border: none;
+    border-bottom:  1px solid #777;
+    outline: none;
+    background: transparent;
+}
+.service-area .dome .box-widget .formBox .inputBox textarea{
+    background-color: rgba(219, 219, 213, 0.5);
+    padding-left: 10px;
+    min-height: 120px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 0.75rem;
+}
+.service-area .dome .box-widget .formBox .inputBox span{
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    font-size: 18px;
+    font-weight: 300;
+    transition: 0.5s;
+    pointer-events: none;
+    transform: translateX(10px);
+    transform: translateY(-28px);
+}
+.service-area .dome .box-widget .formBox .inputBox input:focus ~ span,
+.service-area .dome .box-widget .formBox .inputBox textarea:focus~span,
+.service-area .dome .box-widget .formBox.inputBox input:valid ~ span,
+.service-area .dome .box-widget .formBox .inputBox textarea:valid ~ span
+{
+    transform: translateY(-20px);
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: #ff568c;
+}
+.service-area .dome .box-widget .formBox .inputBox input[type = "submit"]
+{
+    position: absolute;
+    right: 5px;
+    cursor: pointer;
+    background: var(--btn-color);
+    color: #fff;
+    border: none;
+    max-width: 150px;
+    padding: 12px;
+    border-radius: 0.65rem;
+}
+.service-area .dome .box-widget .formBox .inputBox input[type = "submit"]:hover{
+    background-color: #ff568c;
+    color: #fff;
+}
 .phone{
     position: absolute;
     top: 30px;

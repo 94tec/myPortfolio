@@ -24,7 +24,46 @@
                 </div> 
             </div>
         </div>
-        
+        <div class="service-area" id="service-area">
+            <div class="dome">
+                <div class="top-widget">
+                    <span class="toolkit"><ion-icon name="ellipsis-vertical-outline"></ion-icon></span>
+                    <span class="hidden" id="hide" onclick="closeContactForm()"><ion-icon name="close-outline"></ion-icon></span>
+                </div>
+                <div class="box-widget">
+                    <h2>Send a Message</h2>
+                    <form class="formBox" action="https://formspree.io/f/xdoqknqn" method="POST">
+                       <div class="width-50">
+                            <div class="inputBox">
+                                <input type="text" name="f_name" required>
+                                <span>First Name</span>
+                            </div>
+                            <div class="inputBox">
+                                <input type="text" name="l_name" required>
+                                <span>Last Name</span>
+                            </div>
+                       </div>
+                        <div class="width-50">
+                            <div class="inputBox">
+                                <input type="text" name="email" id="email">
+                                <span>Email Address</span>
+                            </div>
+                            <div class="inputBox">
+                                <input type="text" name="" required>
+                                <span>Mobile Number</span>
+                            </div>
+                        </div>   
+                        <div class="inputBox w100">
+                            <span>Write your message here....</span>
+                            <textarea name="message" required></textarea>
+                        </div>
+                        <div class="inputBox w100">
+                            <input type="submit" value="Send">
+                        </div>
+                    </form> 
+                </div>
+            </div>
+        </div>
         <div class="phone">
             <div class="buttons">
                 <div class="right">
@@ -56,8 +95,7 @@
                             
                         </div>
                         <div class="btn-links">
-                            <button type="button">Hire Me</button>
-                            <button type="button">Message</button>
+                            <button type="button" id="message-btn" onclick="loadContactForm()">Message</button>
                         </div>
                         <div class="skills-links">
                             <h2>Skills</h4>
@@ -71,7 +109,7 @@
                     </div> 
                     <div class="footer">
                         <span class="call"><ion-icon name="call-outline"></ion-icon></span>
-                        <span class="message"><ion-icon name="chatbox-outline"></ion-icon></span>
+                        <span class="message" id="message-btn" onclick="loadContactForm()"><ion-icon name="chatbox-outline"></ion-icon></span>
                     </div>
                 </div>
             </div>
@@ -92,7 +130,8 @@
     backDelay: 1500
     });
     typingEffect.start();
-  </script> 
+  </script>
+  <script src="/static/js/main.js"></script> 
 </body>
 </html>
 
