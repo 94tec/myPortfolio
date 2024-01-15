@@ -55,7 +55,7 @@ body{
     min-height: 100vh;
     background: #fff;
     overflow: hidden;
-    perspective: 500px;
+    perspective: 700px;
 }
 .light{
     position: relative;
@@ -334,7 +334,107 @@ h2{
     align-items: center;
     justify-content: center;
     flex-direction: row;
+    perspective: 500px;
 
+}
+.phone-anime{
+    position: absolute;
+    top: 60px;
+    right: 500px;
+    width: 200px;
+    height: 550px;
+    border-radius: 0.7rem;
+    box-sizing: border-box;
+    transform-style: preserve-3d;
+    transform-origin: top;
+    
+}
+.phone-anime .main-widget{
+    position: relative;
+    inset: 0;
+    height: 90%;
+    background: black;
+    /* box-shadow: 0 0 0.1em 0.25em hsl(var(--c-h), 20%, 25%), 0 0 0 var(--border-width) hsl(var(--c-h), 30%, 85%); */
+    box-shadow: rgba(15, 15, 15, .9) 12px -.3px, rgba(235, 223, 231, 0.1) 2px 0px;
+    border-radius: 0.7rem; 
+    transform: rotateY(-20deg) ;
+}
+.phone-anime .main-widget ul{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+}
+.phone-anime .main-widget ul li {
+    position: absolute;
+    list-style: none;
+    margin: 0 5px;
+}
+.phone-anime .main-widget ul li a{
+    text-decoration: none;
+    display: absolute;
+    display: block;
+    font-size: 20px;
+    color: #333;
+    height: 80px;
+    text-align: left;
+    background: #fff;
+    padding-left: 20px;
+    transform: rotate(-10deg) skewX(5deg) translate(0,0);
+    transition: 0.5s;
+    box-shadow: -10px 10px 10px rgba(0, 0, 0, 0.5);
+}
+.phone-anime .main-widget ul li:nth-child(1){
+    top: 0;
+    left: -100px;
+}
+.phone-anime .main-widget ul li:nth-child(2){
+    top: 50%;
+    left: -100px;
+}
+.phone-anime .main-widget ul li:nth-child(3){
+    bottom: 0;
+    left: -100px;
+}
+.phone-anime .main-widget ul li:nth-child(4){
+    top: 0;
+    right: -50px;
+}
+.phone-anime .main-widget ul li:nth-child(5){
+    top: 50%;
+    right: -50px;
+}
+.phone-anime .main-widget ul li:nth-child(6){
+    bottom: 0;
+    right: -50px;
+}
+.phone-anime .main-widget ul li a::before{
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: -10px;
+    height: 100%;
+    width: 10px;
+    background: #032329;
+    transition: 0.5s;
+    transform: rotate(0deg) skewY(-45deg);
+}
+.phone-anime .main-widget ul li a::after{
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: -5px;
+    height: 10px;
+    width: 100%;
+    background: #032329;
+    transform: rotate(0deg) skewX(-45deg);
+}
+.phone-anime .main-widget ul li a:hover{
+    transform: rotate(-20deg) skew(25deg) translate(20px, -15px);
+    box-shadow: -20px 20px 20px rgba(0, 0, 0, 0.5);
 }
 .service-area{
     position: absolute;
@@ -391,6 +491,9 @@ h2{
       font-size: 30px;
       color: var(--text-color);
       z-index: 5;
+  }
+  .service-area .dome .top-widget .hidden ion-icon:hover{
+    color: rgb(180, 113, 113);
   }
   .service-area .dome .box-widget{ 
     position: absolute;
@@ -702,13 +805,13 @@ h2{
     background-color: var(--text-color);
     box-shadow: 5px 0 5px rgba(221, 216, 216, 0.36);
 }
-.icon-links ul ion-icon{
-    font-size: 1.5em;
+.icon-links ul li a ion-icon{
+    font-size: 1.5rem;
     pointer-events: none;
-    opacity: 60%;
     transition: 0.25s;
     color: var(--btn-color);
 }
+
 .bg .details .btn-links{
     margin-top: 15px;
     display: flex;
@@ -724,6 +827,9 @@ h2{
     cursor: pointer;
     background: var(--btn-color);
     color: var(--text-color);
+}
+.bg .details .btn-links button:hover{
+    opacity: 60%;
 }
 .skills-links{
     margin-top: 20px;
@@ -790,124 +896,10 @@ h2{
       color: var(--text-color);
       z-index: 5;
   }
-.contact-form{
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(0.1);
-    width: 80%;
-    background: #fff;
-    border-radius: 6px;
-    padding: 30px 60px 40px 40px;
-    box-shadow: 0 5px 10px rgba(66, 65, 65, 0.2);
-    visibility: hidden;
-    transition: transform 0.6s, top 0.6s;
-}
-.open-form{
-    visibility: visible;
-    top: 50%;
-    transform: translate(-50%, -50%) scale(1)
+  .bg .footer .message:hover{
+    opacity: 50%;
+  }
 
-}
-.contact-form .wrapper{
-    display:  flex;
-    align-items: center;
-    justify-content: space-between;
-
-}
-.contact-form .wrapper .left-side{
-    width: 25%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-top: 15px;
-    line-height: 1.5;
-    position: relative;
-}
-.wrapper .left-side::before{
-    content: '';
-    position: absolute;
-    height: 70%;
-    width: 2px;
-    top: 50%;
-    right: -15px;
-    transform: translateY(-50%);
-    background: #afafb6;
-}
-.wrapper .left-side .details{
-    margin: 14px;
-    text-align: center;
-
-}
-.wrapper .left-side .details i{
-    font-size: 30px;
-    color: #3e2093;
-    margin-bottom: 10px;
-
-}
-.wrapper .left-side .details .topic{
-    font-size: 18px;
-    font-weight: 500;
-}
-.wrapper .left-side .details .text-one,
-.wrapper .left-side .details .text-two
-{
-    font-size: 14px;
-    color: #afafb6;
-}
-.contact-form .wrapper .right-side{
-    width: 75%;
-    margin-left: 75px;
-    line-height: 1.5;
-
-}
-.wrapper .right-side .topic-text{
-    font-size: 23px;
-    font-weight: 600;
-    margin-bottom: 10px;
-    color: #3e2093;
-}
-.right-side .input-box{
-    height: 50px;
-    width: 100%;
-    margin: 12px 0;
-}
-.right-side .input-box textarea,
-.right-side .input-box input{
-    height: 100%;
-    width: 100%;
-    border: none;
-    background: #f0f1f8;
-    border-radius: 6px;
-    font-size: 16px;
-    padding: 0 15px;
-    resize: none;
-
-}
-.right-side .message-box{
-    min-height: 110px;
-    margin-top: 6px;
-}
-.right-side .button{
-    display: inline-block;
-    margin-top: 6px;
-}
-.right-side .button input[type="button"]{
- color: #fff;
- font-size: 18px;
- outline: none;
- border: none;
- padding: 8px 16px;
- border-radius: 6px;
- background: #3e2093;
- cursor: pointer;
- transition: all 0.3s ease;
-}
-.button input[type="button"]:hover{
-    background: #5029bc;
-}
 @keyframes animate{
     0%{
         transform: rotate(0deg);
