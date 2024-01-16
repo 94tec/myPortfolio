@@ -340,13 +340,14 @@ h2{
 .phone-anime{
     position: absolute;
     top: 60px;
-    right: 500px;
+    right: 520px;
     width: 200px;
     height: 550px;
     border-radius: 0.7rem;
     box-sizing: border-box;
     transform-style: preserve-3d;
     transform-origin: top;
+    z-index: 1;
     
 }
 .phone-anime .main-widget{
@@ -355,9 +356,32 @@ h2{
     height: 90%;
     background: black;
     /* box-shadow: 0 0 0.1em 0.25em hsl(var(--c-h), 20%, 25%), 0 0 0 var(--border-width) hsl(var(--c-h), 30%, 85%); */
-    box-shadow: rgba(15, 15, 15, .9) 12px -.3px, rgba(235, 223, 231, 0.1) 2px 0px;
-    border-radius: 0.7rem; 
-    transform: rotateY(-20deg) ;
+    box-shadow: rgba(15, 15, 15, .9) 5px 5px, rgba(15, 15, 15, .9) 5px -5px;
+    border-radius: 1rem; 
+    transform: rotateY(-20deg) skewY(25deg) skewX(-15deg) ;
+}
+.phone-anime .main-widget::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -10px;
+    height: 100%;
+    width: 10px;
+    background: #170d20;
+    transition: 0.5s;
+    transform: rotate(0deg) skewY(-45deg);
+    border-radius: 2rem;
+}
+.phone-anime .main-widget::after{
+    content: '';
+    position: absolute;
+    top: -4px;
+    left: 5px;
+    height: 10px;
+    width: 100%;
+    background: #170d20;
+    transform: rotate(0deg) skewX(-45deg);
+    border-radius: 2rem;
 }
 .phone-anime .main-widget ul{
     position: absolute;
@@ -367,6 +391,7 @@ h2{
     flex-direction: column;
     margin: 0;
     padding: 0;
+    visibility: hidden;
 }
 .phone-anime .main-widget ul li {
     position: absolute;
@@ -617,6 +642,15 @@ h2{
     animation: appear 1s var(--ease-out) forwards;
     --webkit-backface-visibility: hidden;
 }
+.phone img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: var(--border-radius);
+    z-index: 1;
+}
 .phone::before{
     content: "";
     position: absolute;
@@ -707,6 +741,7 @@ h2{
   left: 2px;
   width: 100%;
   height: 20px;
+  z-index: 3;
 }
 .bg .header .settings{
     position: absolute;
@@ -726,11 +761,10 @@ h2{
 .bg .header .close ion-icon{
     font-size: 25px;
     color: var(--text-color);
-    z-index: 5;
 }
 .bg .center-profile{
     position: absolute;
-    top: 40px;
+    top: 30px;
     left: 50%;
     transform: translate(-50%);
     width: 30%;
@@ -739,6 +773,7 @@ h2{
     align-items: center;
     justify-content: center;
     border-radius: 50% ;
+    z-index: 4;
 
 }
 .bg .center-profile img{
@@ -759,6 +794,7 @@ h2{
     flex-direction: column;
     gap: 10px;
     color: var(--text-color);
+    z-index: 5;
 }
 .bg .details h4{
     font-style: italic;
@@ -766,7 +802,10 @@ h2{
     font-weight: 700;
 }
 .bg .details .name{
-    color: rgb(160, 83, 160);
+   color: var(--text-color);
+   font-size: 30px;
+   font-family: 'montserrat';
+   font-weight: 900;
 }
 .bg .details .location{
     display: flex;
@@ -875,6 +914,7 @@ h2{
     left: 2px;
     width: 100%;
     height: 40px;
+    z-index: 6;
   }
   .bg .footer .call{
       position: absolute;
@@ -898,6 +938,14 @@ h2{
   }
   .bg .footer .message:hover{
     opacity: 50%;
+  }
+  .footer-widget{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    background-color: #333;
   }
 
 @keyframes animate{
